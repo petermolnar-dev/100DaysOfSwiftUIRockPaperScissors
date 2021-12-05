@@ -8,9 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var currentSelectionIndex = 0
+    @State private var shouldWin = Bool.random()
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            
+            Text(shouldWin ? "You should win!" : "You should lose!")
+                .padding()
+        }
     }
 }
 
